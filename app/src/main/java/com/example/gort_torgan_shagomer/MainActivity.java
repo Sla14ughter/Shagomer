@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             float accelerationSquareRoot = (x * x + y * y + z * z) /
                     (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH);
             long actualTime = System.currentTimeMillis();
-            if(accelerationSquareRoot >= 2) {
+            if(accelerationSquareRoot >= 2 & active) {
                 if(actualTime - lastUpdate < 200)
                     return;
                 lastUpdate = actualTime;
